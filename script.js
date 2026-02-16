@@ -30,19 +30,19 @@ function autoSlide() {
 
 setInterval(autoSlide, 3000);
 
-const track = document.querySelector(".shorts-track");
-const shorts = document.querySelectorAll(".shorts-track iframe");
-
 let shortIndex = 0;
+const shortsTrack = document.querySelector(".shorts-track");
+const shorts = document.querySelectorAll(".short");
 
-function verticalSlide(){
+const slideHeight = 600;
+
+setInterval(() => {
   shortIndex++;
 
-  if(shortIndex >= shorts.length){
+  if (shortIndex >= shorts.length) {
     shortIndex = 0;
   }
 
-  track.style.transform = `translateY(-${shortIndex * 365}px)`;
-}
+  shortsTrack.style.transform = `translateY(-${shortIndex * slideHeight}px)`;
 
-setInterval(verticalSlide, 3000);
+}, 4000);
