@@ -30,19 +30,49 @@ function autoSlide() {
 
 setInterval(autoSlide, 3000);
 
-let shortIndex = 0;
-const shortsTrack = document.querySelector(".shorts-track");
-const shorts = document.querySelectorAll(".short");
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize the Vertical Reel
+    const reel = new Swiper('.shorts-swiper', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
 
-const slideHeight = 600;
+    // Handle Hover-to-Play on the Bento Grid
+    const bentoItems = document.querySelectorAll('.bento-item');
 
-setInterval(() => {
-  shortIndex++;
+    bentoItems.forEach(item => {
+        const videoId = item.getAttribute('data-id');
+        const frame = item.querySelector('.v-frame');
 
-  if (shortIndex >= shorts.length) {
-    shortIndex = 0;
-  }
+        item.addEventListener('mouseenter', () => {
+            reel.autoplay.stop(); // Pause the reel when looking at a feature
+            
+            // Inject Iframe on hover for performance and professional feel
+            frame.innerHTML = `
+                <iframe 
+                    src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0" 
+                    style="width:100%; height:100%; position:absolute; top:10; left:0; z-index:2;"
+                    frameborder="0" 
+                    allow="autoplay">
+                </iframe>
+            `;
+            frame.style.opacity = '1';
+        });
 
-  shortsTrack.style.transform = `translateY(-${shortIndex * slideHeight}px)`;
-
-}, 4000);
+        item.addEventListener('mouseleave', () => {
+            reel.autoplay.start();
+            frame.innerHTML = ''; // Clean up resources
+            frame.style.opacity = '0';
+        });
+    });
+});
