@@ -308,6 +308,17 @@ section {
     height: 708px;
 }
 
+.shorts-reel-wrapper:hover {
+    border-color: var(--accent-red);
+    transform: translateY(-5px);
+}
+
+.shorts-reel-wrapper:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 .reel-header {
     font-size: 12px;
     text-align: center;
