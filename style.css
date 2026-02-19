@@ -49,7 +49,7 @@ section {
 .creative {
   background:#050505;
   text-align:center;
-  padding:5vw;
+  padding:20px 20px;
 }
 
 .container {
@@ -213,10 +213,10 @@ section {
 }
 
 .video-vault-section {
-    padding: 100px 5%;
+    padding: 30px 5%;
     background: var(--dark-bg);
     color: #fff;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
 }
 
 .section-tag {
@@ -231,6 +231,7 @@ section {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .section-heading span {
@@ -343,4 +344,119 @@ section {
 @media (max-width: 1024px) {
     .vault-container { grid-template-columns: 1fr; }
     .video-bento { grid-template-rows: repeat(4, 200px); }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .vault-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .singles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 200px);
+  }
+
+  .card, .goal {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 200px);
+  }
+
+  .shorts-reel-wrapper {
+    height: 500px;
+  }
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* 1. TABLET & SMALL LAPTOPS (Max-width: 1024px) */
+@media (max-width: 1024px) {
+    .vault-container {
+        grid-template-columns: 1fr; /* Stack Left and Right sections vertically */
+        gap: 40px;
+    }
+
+    .video-bento {
+        grid-template-rows: repeat(3, 250px); /* Adjust row height for smaller screens */
+    }
+
+    .shorts-reel-wrapper {
+        height: 600px; /* Give it a fixed height when stacked */
+    }
+}
+
+/* 2. MOBILE PHONES (Max-width: 768px) */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 2.2rem; /* Smaller text for mobile */
+        text-align: center;
+    }
+
+    .section-tag {
+        text-align: center;
+    }
+
+    /* Force all videos into a single vertical line */
+    .video-bento {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bento-item {
+        height: 220px; /* Consistent height for all mobile video cards */
+        width: 100%;
+    }
+
+    /* Special handling for the feature video on mobile */
+    .bento-item.feature-video {
+        grid-column: auto;
+        grid-row: auto;
+        height: 250px;
+    }
+
+    /* SHORTS SECTION: Change from Vertical to Horizontal for Mobile */
+    .shorts-reel-wrapper {
+        height: auto;
+        padding: 15px;
+    }
+
+    .shorts-swiper {
+        height: 450px; /* Standard vertical video aspect ratio for mobile view */
+    }
+}
+
+/* 3. VERY SMALL DEVICES (Max-width: 480px) */
+@media (max-width: 480px) {
+    .section-heading {
+        font-size: 1.8rem;
+    }
+
+    .video-vault-section {
+        padding: 60px 15px;
+    }
+
+    .shorts-swiper {
+        height: 400px;
+    }
 }
