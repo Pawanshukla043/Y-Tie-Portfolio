@@ -200,263 +200,234 @@ section {
   z-index:1;
 }
 
-
 .vision-box {
-  background: url('https://images.unsplash.com/photo-1506157786151-b8491531f063') center/cover;
-  padding: 80px 20px;
+  background:url('https://images.unsplash.com/photo-1506157786151-b8491531f063') center/cover;
+  padding:80px 20px;
 }
 
 :root {
-    --accent-red: #ff0050; /* Matches your 'Explore Music' button */
-    --dark-bg: #000000;
-    --glass: rgba(255, 255, 255, 0.05);
+  --accent-red:#ff0050;
+  --dark-bg:#000000;
+  --glass:rgba(255,255,255,0.05);
 }
 
 .video-vault-section {
-    padding: 30px 5%;
-    background: var(--dark-bg);
-    color: #fff;
-    /* font-family: 'Inter', sans-serif; */
+  padding:30px 5%;
+  background:var(--dark-bg);
+  color:#fff;
 }
 
 .section-tag {
-    color: var(--accent-red);
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+  color:var(--accent-red);
+  font-size:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:10px;
 }
 
 .section-heading {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 50px;
-    text-align: center;
+  font-size:3rem;
+  font-weight:800;
+  margin-bottom:50px;
+  text-align:center;
 }
 
 .section-heading span {
-    -webkit-text-stroke: 1px white;
-    color: transparent;
+  -webkit-text-stroke:1px white;
+  color:transparent;
 }
 
 .vault-container {
-    display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    gap: 30px;
+  display:grid;
+  grid-template-columns:2.5fr 1fr;
+  gap:30px;
 }
 
-/* BENTO GRID STYLING */
+/* BENTO GRID */
+
 .video-bento {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px 250px;
-    gap: 15px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:250px 250px;
+  gap:15px;
 }
 
 .bento-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    cursor: pointer;
-    background: #111;
-    border: 1px solid var(--glass);
-    transition: all 0.5s ease;
+  position:relative;
+  overflow:hidden;
+  border-radius:4px;
+  cursor:pointer;
+  background:#111;
+  border:1px solid var(--glass);
+  transition:all 0.5s ease;
 }
 
 .bento-item.feature-video {
-    grid-column: span 2;
-    grid-row: span 2;
+  grid-column:span 2;
+  grid-row:span 2;
 }
 
 .bento-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%); /* Pencil/Sketch feel */
-    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    opacity: 0.6;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(100%);
+  transition:0.6s cubic-bezier(0.23,1,0.32,1);
+  opacity:0.6;
 }
 
 .bento-item:hover {
-    border-color: var(--accent-red);
-    transform: translateY(-5px);
+  border-color:var(--accent-red);
+  transform:translateY(-5px);
 }
 
 .bento-item:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.05);
+  filter:grayscale(0%);
+  opacity:1;
+  transform:scale(1.05);
 }
 
-/* Label for featured video */
 .v-label {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: var(--accent-red);
-    padding: 5px 15px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  background:var(--accent-red);
+  padding:5px 15px;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:1px;
 }
 
-/* SHORTS REEL STYLING */
+/* SHORTS */
+
 .shorts-reel-wrapper {
-    background: var(--glass);
-    border-radius: 8px;
-    padding: 20px;
-    border: 1px solid rgba(255,255,255,0.1);
-    height: 708px;
+  background:var(--glass);
+  border-radius:8px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,0.1);
+  height:708px;
 }
 
 .shorts-reel-wrapper:hover {
-    border-color: var(--accent-red);
-    transform: translateY(-5px);
+  border-color:var(--accent-red);
+  transform:translateY(-5px);
 }
 
 .shorts-reel-wrapper:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.05);
+  filter:grayscale(0%);
+  opacity:1;
+  transform:scale(1.05);
 }
 
 .reel-header {
-    font-size: 12px;
-    text-align: center;
-    margin-bottom: 20px;
-    letter-spacing: 3px;
-    border-bottom: 1px solid var(--accent-red);
-    padding-bottom: 10px;
+  font-size:12px;
+  text-align:center;
+  margin-bottom:20px;
+  letter-spacing:3px;
+  border-bottom:1px solid var(--accent-red);
+  padding-bottom:10px;
 }
 
 .shorts-swiper {
-    height: 45vw;
+  height:45vw;
 }
 
 .swiper-slide iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.5));
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 1024px) {
-    .vault-container { grid-template-columns: 1fr; }
-    .video-bento { grid-template-rows: repeat(4, 200px); }
+  width:100%;
+  height:100%;
+  border-radius:10px;
+  filter:drop-shadow(0 0 15px rgba(255,0,0,0.5));
 }
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
   .vault-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .singles-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
+    gap:40px;
   }
 
   .video-bento {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 200px);
-  }
-
-  .card, .goal {
-    width: 160px;
-  }
-}
-
-@media (max-width: 480px) {
-  .video-bento {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 200px);
+    grid-template-rows:repeat(3,250px);
   }
 
   .shorts-reel-wrapper {
-    height: 500px;
+    height:600px;
   }
 }
 
-/* ================= ANIMATIONS ================= */
+@media (max-width:768px) {
+  .singles-grid {
+    grid-template-columns:1fr;
+  }
+
+  .section-heading {
+    font-size:2.2rem;
+    text-align:center;
+  }
+
+  .section-tag {
+    text-align:center;
+  }
+
+  .video-bento {
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .bento-item {
+    height:220px;
+    width:100%;
+  }
+
+  .bento-item.feature-video {
+    grid-column:auto;
+    grid-row:auto;
+    height:250px;
+  }
+
+  .shorts-reel-wrapper {
+    height:auto;
+    padding:15px;
+  }
+
+  .shorts-swiper {
+    height:450px;
+  }
+
+  .card,
+  .goal {
+    width:160px;
+  }
+}
+
+@media (max-width:480px) {
+  .video-bento {
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(5,200px);
+  }
+
+  .shorts-reel-wrapper {
+    height:500px;
+  }
+
+  .section-heading {
+    font-size:1.8rem;
+  }
+
+  .video-vault-section {
+    padding:60px 15px;
+  }
+
+  .shorts-swiper {
+    height:400px;
+  }
+}
+
+/* ANIMATION */
 
 @keyframes fadeUp {
   from {opacity:0; transform:translateY(30px);}
   to {opacity:1; transform:translateY(0);}
-}
-
-/* --- RESPONSIVE BREAKPOINTS --- */
-
-/* 1. TABLET & SMALL LAPTOPS (Max-width: 1024px) */
-@media (max-width: 1024px) {
-    .vault-container {
-        grid-template-columns: 1fr; /* Stack Left and Right sections vertically */
-        gap: 40px;
-    }
-
-    .video-bento {
-        grid-template-rows: repeat(3, 250px); /* Adjust row height for smaller screens */
-    }
-
-    .shorts-reel-wrapper {
-        height: 600px; /* Give it a fixed height when stacked */
-    }
-}
-
-/* 2. MOBILE PHONES (Max-width: 768px) */
-@media (max-width: 768px) {
-    .section-heading {
-        font-size: 2.2rem; /* Smaller text for mobile */
-        text-align: center;
-    }
-
-    .section-tag {
-        text-align: center;
-    }
-
-    /* Force all videos into a single vertical line */
-    .video-bento {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .bento-item {
-        height: 220px; /* Consistent height for all mobile video cards */
-        width: 100%;
-    }
-
-    /* Special handling for the feature video on mobile */
-    .bento-item.feature-video {
-        grid-column: auto;
-        grid-row: auto;
-        height: 250px;
-    }
-
-    /* SHORTS SECTION: Change from Vertical to Horizontal for Mobile */
-    .shorts-reel-wrapper {
-        height: auto;
-        padding: 15px;
-    }
-
-    .shorts-swiper {
-        height: 450px; /* Standard vertical video aspect ratio for mobile view */
-    }
-}
-
-/* 3. VERY SMALL DEVICES (Max-width: 480px) */
-@media (max-width: 480px) {
-    .section-heading {
-        font-size: 1.8rem;
-    }
-
-    .video-vault-section {
-        padding: 60px 15px;
-    }
-
-    .shorts-swiper {
-        height: 400px;
-    }
 }
