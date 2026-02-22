@@ -4,273 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y TIE | Official Portfolio</title>
+    <title id="page_title">Artist Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="icon" type="image/png" href="/img/favicone.png">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
-<body>
-
+<body> <!-- HERO -->
     <section class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Y TIE</h1>
-            <p>My music sounds too international 🏆</p>
-            <a href="https://open.spotify.com/artist/2M3fd2Jxn8raB2Sirwl2YF" target="" class="btn">Explore Music</a>
+            <h1 id="hero_title"></h1>
+            <p id="hero_tagline"></p> <a id="hero_button" class="btn" target="_blank"></a>
         </div>
-    </section>
+    </section> <!-- ABOUT -->
     <section class="about creative">
         <div class="container">
-            <h2 class="section-heading">Who <span>Is Y TIE?</span></h2>
-            <p>
-                Born from individuality, Y TIE represents vision beyond limits.
-                Inspired by his unique identity, his sound blends melodic rap,
-                trap soul, R&B and commercial emotion.
-            </p>
-            <p>
-                From underground releases to a full independent debut album,
-                Y TIE’s journey reflects resilience, versatility and evolution.
-            </p>
+            <h2 class="section-heading" id="about_heading"></h2>
+            <p id="about_para_1"></p>
+            <p id="about_para_2"></p>
         </div>
-    </section>
-
-
+    </section> <!-- JOURNEY -->
     <section class="journey creative">
-
         <h2 class="section-heading"><span>The </span>Journey</h2>
-
         <div class="slider">
-            <div class="slides">
-
-                <div class="slide" style="background-image:url('/img/img1.png')">
-                    <h3>2025</h3>
-                    <p>Released debut album "Tie Forever" independently.</p>
-                </div>
-
-                <div class="slide" style="background-image:url('/img/img2.png')">
-                    <h3>2024</h3>
-                    <p>Industry exposure through campaigns & live gigs.</p>
-                </div>
-
-                <div class="slide" style="background-image:url('/img/img3.png')">
-                    <h3>2023</h3>
-                    <p>Shortlisted for MTV Hustle 3 auditions.</p>
-                </div>
-
-                <div class="slide" style="background-image:url('/img/img4.png')">
-                    <h3>2022</h3>
-                    <p>First wave of releases introducing new school sound.</p>
-                </div>
-
-            </div>
+            <div class="slides" id="journey_slides"></div>
         </div>
-
-    </section>
-
-
-
+    </section> <!-- IMPACT -->
     <section class="impact creative">
         <h2 class="section-heading">Im<span>pa</span>ct</h2>
-        <div class="cards">
-
-            <div class="card">
-                <h3>3000+</h3>
-                <p>Spotify Listeners</p>
-            </div>
-
-            <div class="card">
-                <h3>1.8L+</h3>
-                <p>YouTube Views</p>
-            </div>
-
-            <div class="card">
-                <h3>50K</h3>
-                <p>Monthly Reach</p>
-            </div>
-
-            <div class="card">
-                <h3>100+</h3>
-                <p>Merch Sold</p>
-            </div>
-
-        </div>
-    </section>
-
+        <div class="cards" id="stats_container"></div>
+    </section> <!-- MUSIC -->
     <section class="music-showcase creative">
-
         <div class="music-container">
-
-            <!-- LEFT SIDE : ALBUM -->
-            <div class="album-side">
-                <iframe data-testid="embed-iframe" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/album/34VBIlYUzYbXkSHqafKb8c?utm_source=generator" width="100%"
-                    height="520" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-            </div>
-
-
-            <!-- RIGHT SIDE : SINGLES -->
-            <div class="singles-grid">
-
-                <iframe data-testid="embed-iframe" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/track/4s5DGmHAPoWCEnA3ek0Bgv?utm_source=generator" width="100%"
-                    height="352" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-
-                <iframe data-testid="embed-iframe" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/track/1yqMqe63UYJTaEw6qlNwGN?utm_source=generator" width="100%"
-                    height="352" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-
-                <iframe data-testid="embed-iframe" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/album/6GRhoVmJlBvqbMT1jTRG85?utm_source=generator&theme=0"
-                    width="100%" height="152" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-
-                <iframe data-testid="embed-iframe" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/album/2fsZwHAbohQhIrUkRJ9qLt?utm_source=generator&" width="100%"
-                    height="152" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="goals creative">
-        <h2 class="section-heading">Future <span>Goals</span></h2>
-
-        <div class="goal-cards">
-
-            <div class="goal">
-                <h3>500K – 1M</h3>
-                <p>YouTube Subscribers</p>
-            </div>
-
-            <div class="goal">
-                <h3>15M+</h3>
-                <p>Spotify Monthly Listeners</p>
-            </div>
-
-            <div class="goal">
-                <h3>India Tour</h3>
-                <p>Live club & city shows</p>
-            </div>
-
-            <div class="goal">
-                <h3>Mainstream Collabs</h3>
-                <p>Indian & International</p>
-            </div>
-
-            <div class="goal">
-                <h3>Label Deal</h3>
-                <p>Upcoming EP Release</p>
-            </div>
-
+            <div class="album-side" id="album_iframe"></div>
+            <div class="singles-grid" id="singles_container"></div>
         </div>
     </section>
-
     <section class="video-vault-section">
-        <!-- <div class="section-tag">Cinematics</div> -->
-        <h2 class="section-heading"><span>Visual </span>Work</h2>
-
-        <div class="vault-container">
-            <div class="video-bento">
-                <div class="bento-item feature-video" data-id="Pl3g7dz1jxE">
-                    <div class="v-frame"></div>
-                    <img src="https://img.youtube.com/vi/Pl3g7dz1jxE/maxresdefault.jpg" alt="Music Video 1">
-                    <div class="v-label">FEATURED RELEASE</div>
-                </div>
-
-                <div class="bento-item" data-id="AoOq1CWokO0">
-                    <div class="v-frame"></div>
-                    <img src="https://img.youtube.com/vi/UzqCMINQ-ec/hqdefault.jpg" alt="Music Video 2">
-                </div>
-                <div class="bento-item" data-id="1HJJeW91tK8">
-                    <div class="v-frame"></div>
-                    <img src="https://img.youtube.com/vi/1HJJeW91tK8/hqdefault.jpg" alt="Music Video 3">
-                </div>
-                <div class="bento-item" data-id="8NQSf8eYNNc">
-                    <div class="v-frame"></div>
-                    <img src="https://img.youtube.com/vi/8NQSf8eYNNc/hqdefault.jpg" alt="Music Video 4">
-                </div>
-                <div class="bento-item" data-id="AoOq1CWokO0">
-                    <div class="v-frame"></div>
-                    <img src="https://img.youtube.com/vi/AoOq1CWokO0/hqdefault.jpg" alt="Music Video 5">
-                </div>
-                <div class="bento-item" data-id="dAbW6a5rL70">
-                    <div class="v-frame"></div>
-                    <img src="https://img.youtube.com/vi/dAbW6a5rL70/hqdefault.jpg" alt="Music Video 6">
-                </div>
-            </div>
-
+        <h2 class="section-heading"> <span>Visual </span>Work </h2>
+        <div class="vault-container"> <!-- VIDEO BENTO -->
+            <div class="video-bento" id="video_bento"></div> <!-- SHORTS / REELS -->
             <div class="shorts-reel-wrapper">
-                <div class="reel-header">SHORTS REEL</div>
+                <div class="reel-header">SHORTS & REELS</div>
                 <div class="swiper shorts-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <iframe src="https://www.youtube.com/embed/vQDYQfSWcGY?controls=0&modestbranding=1"
-                                frameborder="0"></iframe>
-                        </div>
-                        <div class="swiper-slide">
-                            <iframe src="https://www.youtube.com/embed/T--OW0eN4Uc?controls=0&modestbranding=1"
-                                frameborder="0"></iframe>
-                        </div>
-                        <div class="swiper-slide">
-                            <iframe src="https://www.youtube.com/embed/YdgM6XoWyEY?controls=0&modestbranding=1"
-                                frameborder="0"></iframe>
-                        </div>
-                    </div>
+                    <div class="swiper-wrapper" id="shorts_container"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-    </section>
-
-
+    </section> <!-- ALBUM CTA -->
     <section class="album creative">
         <div class="album-box">
-            <h2 class="section-heading">TIE <span>FOREVER</span></h2>
-            <p>
-                A sonic journey across trap rage, romantic R&B, lyrical depth and gospel emotion.
-            </p>
-            <a href="https://open.spotify.com/album/34VBIlYUzYbXkSHqafKb8c" target="_blank" class="btn">
-                Listen Now
-            </a>
+            <h2 class="section-heading" id="album_title"></h2>
+            <p id="album_description"></p> <a id="album_button" class="btn" target="_blank"></a>
         </div>
-    </section>
-
+    </section> <!-- VISION -->
     <section class="vision creative">
         <div class="vision-box">
-            <h2 class="section-heading"><span>Future</span> Vision</h2>
-            <p>
-                To bridge hip-hop and mainstream audiences through versatile sound,
-                emotion-driven storytelling and international sonic quality.
-            </p>
+            <h2 class="section-heading" id="vision_heading"></h2>
+            <p id="vision_text"></p>
         </div>
-    </section>
-
-
+    </section> <!-- <h2 class="section-heading" id="album_title"></h2> --> <!-- CONTACT -->
     <section class="contact creative">
         <h2 class="section-heading">Bookings <span>&</span> Business</h2>
-        <p>Email: bluemoonproducrio2023@gmail.com</p>
-        <p>Phone: +91 7049355284</p>
+        <p>Email: <span id="contact_email"></span></p>
+        <p>Phone: <span id="contact_phone"></span></p>
     </section>
-
-
-    <!-- <footer>
-        <a href="https://www.instagram.com/ytie_melody" target="_blank">Instagram</a>
-    </footer> -->
-
+    <script src="script.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
