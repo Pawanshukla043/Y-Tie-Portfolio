@@ -13,21 +13,21 @@
 </head>
 
 <body> <!-- HERO -->
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
             <h1 id="hero_title"></h1>
             <p id="hero_tagline"></p> <a id="hero_button" class="btn" target="_blank"></a>
         </div>
     </section> <!-- ABOUT -->
-    <section class="about creative">
+    <section id="about" class="about creative">
         <div class="container">
             <h2 class="section-heading" id="about_heading"></h2>
             <p id="about_para_1"></p>
             <p id="about_para_2"></p>
         </div>
     </section> <!-- JOURNEY -->
-    <section class="journey creative">
+    <section id="journey" class="journey creative">
         <h2 class="section-heading"><span>The </span>Journey</h2>
         <div class="slider">
             <div class="slides" id="journey_slides"></div>
@@ -37,13 +37,22 @@
         <h2 class="section-heading">Im<span>pa</span>ct</h2>
         <div class="cards" id="stats_container"></div>
     </section> <!-- MUSIC -->
-    <section class="music-showcase creative">
+    <section id="music" class="music-showcase creative">
         <div class="music-container">
             <div class="album-side" id="album_iframe"></div>
             <div class="singles-grid" id="singles_container"></div>
         </div>
     </section>
-    <section class="video-vault-section">
+    
+    <!-- GOALS -->
+    <section id="goals" class="goals creative">
+        <h2 class="section-heading">Future <span>Goals</span></h2>
+        <div class="goal-cards">
+            <!-- Goals will be dynamically loaded from goals-data.js -->
+        </div>
+    </section>
+    
+    <section id="videos" class="video-vault-section">
         <h2 class="section-heading"> <span>Visual </span>Work </h2>
         <div class="vault-container"> <!-- VIDEO BENTO -->
             <div class="video-bento" id="video_bento"></div> <!-- SHORTS / REELS -->
@@ -62,17 +71,58 @@
             <p id="album_description"></p> <a id="album_button" class="btn" target="_blank"></a>
         </div>
     </section> <!-- VISION -->
-    <section class="vision creative">
+    <section id="vision" class="vision creative">
         <div class="vision-box">
             <h2 class="section-heading" id="vision_heading"></h2>
             <p id="vision_text"></p>
         </div>
     </section> <!-- <h2 class="section-heading" id="album_title"></h2> --> <!-- CONTACT -->
-    <section class="contact creative">
+    <section id="contact" class="contact creative">
         <h2 class="section-heading">Bookings <span>&</span> Business</h2>
         <p>Email: <span id="contact_email"></span></p>
         <p>Phone: <span id="contact_phone"></span></p>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Connect</h3>
+                <div class="social-links" id="social_links"></div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Get In Touch</h3>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                    <textarea name="description" placeholder="Message" rows="3" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div id="formStatus"></div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Y TIE. All Rights Reserved. | Powered by Bluemoon Production</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
     <script async src="https://www.instagram.com/embed.js"></script>
 </body>
